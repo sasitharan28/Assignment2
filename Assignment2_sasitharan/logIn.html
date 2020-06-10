@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Show trackr</title>
+		<link rel="stylesheet" type='text/css' href="css/login.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	</head>
+	<body>
+		<div id="topBar">
+			  <a href="index.html"><button type="button" id='logo'>Show<b>Trackr</b></button></a>
+			  <a href="index.html"><button type="button" id='home'>Home</button></a>
+			  <a href="add.html"><button type="button" id='add'>Add</button></a>
+			  <a href="signUp.html"><button type="button" id='signup'>Sign up</button></a>
+			  <a href="logIn.html"><button type="button" id='login'>Login</button></a>
+		</div>
+
+		<div id='loginDiv'>
+			<div id='loginTitleDiv'>Login</div>
+			<form method='post' name='signIn' action='#'>
+				<button  id='atFont' class="fa fa-at" aria-hidden='true'></button><input type='text' id='email' value='' placeholder='Email'/><br/>
+				<button  id='keyFont' class='fa fa-key' aria-hidden='true'></button><input type='password' value='' id='password' placeholder='password'/><br/>
+				<input type='Submit' value='Sign In' id='signInBtn' onclick="signInFun(email.value, password.value)" />
+			</form>
+			<br/>
+			<div id='bottomText'>
+				For got your password?<br/>
+				<a href='signup.html'>Don't have an account yet?<b>Sign Up</b></a>
+				<br/>
+				<br/>
+			</div>
+
+			<div id='signInApiDiv'>
+			<div id='orLabel'>OR</div>
+				<br/>
+				<img src='uses/logInBtnImg.PNG' id='loginWidthFb'/><br/>
+				<img src='uses/signInWithGoogle.PNG' id='loginWidthG'/>
+			</div>
+		</div>
+
+
+
+		<script type="text/javascript">
+			var member={
+				name:["sasi","raghu","mathu","kiri","mahi","subas"],
+				email:["sasi@gmail.com","raghu@gmail.com","mathu@gmail.com","kiri@gmail.com","mahi@gmail.com","subas@gmail.com"],
+				password:["sasiG123","raghuG123","mathuG123","kiriG123","mahiG123","subasG123"],
+			}
+		//	alert();
+
+			function signInFun(Smail,Spassword){
+				var noName=member.name.length-1;
+				var noPass=member.password.length-1;
+				var noEmail=member.email.length-1;
+				var a=0;
+				//alert();
+				for (i=0; i<noName; i++){
+					var EntryMail= member.email[noEmail];
+					var EntryPass= member.email[noEmail];
+					if(Smail==member.email[i]){
+						if(Spassword==member.password[i]){
+							a=1;
+							alert('Sign In success.');
+						}else{
+							a=0;
+						}
+
+					}else{
+						 a=0;
+					}
+					//alert();
+				}
+				if(a==1){
+					alert('Sign In success.');
+				}else{
+					alert('Sign In faild.');
+				}
+			}
+		</script>
+
+
+	</body>
+</html>

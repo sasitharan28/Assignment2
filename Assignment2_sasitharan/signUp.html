@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Show trackr</title>
+		<link rel="stylesheet" type='text/css' href="css/signUp.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	</head>
+	<body>
+		<div id="topBar">
+			  <a href="index.html"><button type="button" id='logo'>Show<b>Trackr</b></button></a>
+			  <a href="index.html"><button type="button" id='home'>Home</button></a>
+			  <a href="add.html"><button type="button" id='add'>Add</button></a>
+			  <a href="signUp.html"><button type="button" id='signup'>Sign up</button></a>
+			  <a href="logIn.html"><button type="button" id='login'>Login</button></a>
+		</div>
+
+		<div id='signUpDiv'>
+			<br/>
+			<div id='signupTitleDiv'>
+				Sign up
+			</div>
+			<div id='signUpDiv2'>
+			<form method='post' name='signUpForm' action='#'>
+				<button  id='userFont' class='fa fa-user' aria-hidden='true'></button><input type='text' id='name' name='name' placeholder='Name' onkeyup="nameValid(this.value)" /><br/>
+				<label id='nameMsg'></label><br/>
+				<button  id='atFont' class="fa fa-at" aria-hidden='true'></button><input type='email' id='email' name='email' placeholder='Email' onkeyup="emailValid(this.value)" /><br/>
+				<label id='emailMsg'></label><br/>
+				<button  id='keyFont' class='fa fa-key' aria-hidden='true'></button><input type='password' id='password' name='password' placeholder='Password' onkeyup="passValid(this.value)" /><br/>
+				<label id='passMsg'></label><br/>
+				<div>
+					<label>By clicking on Sign up, you agree to <b>terms & conditions</b> and <b>private policy</b></label>
+				</div>
+				<input type='submit' value='Sign up' name='submit' id='submit' />
+				<br/>
+				<div>
+					<label>Already have an account?  <a href='signin.html'><b>Log in now</b></a></label>
+				</div>
+			</form>
+			</div>
+			<br/>
+		</div>
+
+
+
+
+
+
+
+		<script type="text/javascript">
+		var naVa=0;
+		document.getElementById("submit").disabled = true;
+
+		function nameValid(as){
+			//var text=document.getElementsById('tvShowIp').value();
+			if(as==""){
+				document.getElementById('submit').style.cursor="not-allowed";
+				document.getElementById('nameMsg').innerHTML="Please enter the name.";
+				document.getElementById('nameMsg').style.color="red";
+				document.getElementById("submit").disabled = true;
+				document.getElementById('name').style.boxShadow="1px 1px 5px 1px red";
+				naVa=0;
+			}else{
+
+				var letters = /^[0-9a-zA-Z]+$/;
+				if(as.match(letters)){
+					document.getElementById('submit').style.cursor="pointer";
+					document.getElementById('nameMsg').innerHTML="name is valid.";
+						document.getElementById('nameMsg').style.color="green";
+						document.getElementById('name').style.boxShadow="0px 0px 0px 0px red";
+						document.getElementById("submit").disabled = false;
+					//alert('Your registration number have accepted : you can try another');
+					//document.form1.text1.focus();
+					naVa=1;
+				}else{
+					document.getElementById('submit').style.cursor="not-allowed";
+					document.getElementById('nameMsg').innerHTML="name is invalid.";
+					document.getElementById('nameMsg').style.color="red";
+					document.getElementById("submit").disabled = true;
+					document.getElementById('name').style.boxShadow="1px 1px 5px 1px red";
+					//alert('Please input alphanumeric characters only');
+					naVa=0;
+				}
+
+			}
+		}
+
+
+//password valid settings
+		var pVa=0;
+		var num=0;
+		var small=0;
+		var cap=0;
+		var le=0;
+		function passValid(pass){
+
+			var passLenth=pass.length-1;
+			if(pass==""){
+				document.getElementById('submit').style.cursor="not-allowed";
+				document.getElementById('passMsg').innerHTML="name is invalid. (use capital, small letters and symbol)";
+				document.getElementById('passMsg').style.color="red";
+				document.getElementById("submit").disabled = true;
+				document.getElementById('password').style.boxShadow="1px 1px 5px 1px red";
+				pVa=0;
+			}
+
+				var letters1 = /^[0-9]+$/;
+				var letters2 = /^[a-z]+$/;
+				var letters3 = /^[A-Z]+$/;
+
+
+				if(pass[passLenth].match(letters1)){
+					num=1;
+				}
+
+				if(pass[passLenth].match(letters2)){
+					small=1;
+				}
+
+				if(pass[passLenth].match(letters3)){
+					cap=1;
+				}
+				if (passLenth>=8){
+					le=1;
+				}
+			if(num==1 &&	small==1 &&	cap==1 && le==1){
+				document.getElementById('submit').style.cursor="pointer";
+				document.getElementById('passMsg').innerHTML="Password is valid.";
+					document.getElementById('passMsg').style.color="green";
+					document.getElementById('password').style.boxShadow="0px 0px 0px 0px red";
+					document.getElementById("submit").disabled = false;
+					pVa=1;
+			}else{
+				document.getElementById('submit').style.cursor="not-allowed";
+				document.getElementById('passMsg').innerHTML="Password is invalid. (use capital, small letters and symbol)";
+				document.getElementById('passMsg').style.color="red";
+				document.getElementById("submit").disabled = true;
+				document.getElementById('password').style.boxShadow="1px 1px 5px 1px red";
+				pVa=0;
+			}
+
+
+			//alert(as);
+		}
+
+
+
+		function allow(){
+			//if(pVa==0 && naVa==0){
+			//	document.getElementById('submit').style.cursor="not-allowed";
+			//	document.getElementById("submit").disabled = true;
+			//}else{
+			//	document.getElementById('submit').style.cursor="pointer";
+			//	document.getElementById("submit").disabled = false;
+			//}
+			//alert(al);
+		}
+
+		</script>
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

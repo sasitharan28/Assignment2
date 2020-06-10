@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Show trackr</title>
+		<link rel="stylesheet" type='text/css' href="css/add.css">
+	</head>
+	<body>
+		<div id="topBar">
+			  <a href="index.html"><button type="button" id='logo'>Show<b>Trackr</b></button></a>
+			  <a href="index.html"><button type="button" id='home'>Home</button></a>
+			  <a href="add.html"><button type="button" id='add'>Add</button></a>
+			  <a href="signUp.html"><button type="button" id='signup'>Sign up</button></a>
+			  <a href="logIn.html"><button type="button" id='login'>Login</button></a>
+		</div>
+		<div id='inputWar'>
+			<div id='titleDiv'>
+				<div>ADD TV SHOW</div>
+			</div>
+			<div>
+				<div id='nameDiv'>Name</div>
+				<form method='post' action='#'>
+					<input type='text' placeholder='Enter TV show name' id='tvShowIp' onkeyup="cursor(this.value)" ><br/>
+					<label id='allowMsg'></label><br/>
+					<input type='submit' id='submit' value='Add' onclick="allow()" />
+
+
+
+
+				</form>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+		var al=0;
+		document.getElementById("submit").disabled = true;
+
+		function cursor(as){
+			//var text=document.getElementsById('tvShowIp').value();
+			if(as==""){
+				document.getElementById('submit').style.cursor="not-allowed";
+				document.getElementById('allowMsg').innerHTML="Please enter TV show name.";
+				document.getElementById('allowMsg').style.color="red";
+				document.getElementById("submit").disabled = true;
+				document.getElementById('tvShowIp').style.boxShadow="1px 1px 5px 1px red";
+				al=0;
+			}else{
+
+				var letters = /^[0-9a-zA-Z]+$/;
+				if(as.match(letters)){
+					document.getElementById('submit').style.cursor="pointer";
+					document.getElementById('allowMsg').innerHTML="TV show name is valid.";
+						document.getElementById('allowMsg').style.color="green";
+						document.getElementById('tvShowIp').style.boxShadow="0px 0px 0px 0px red";
+						document.getElementById("submit").disabled = false;
+					//alert('Your registration number have accepted : you can try another');
+					//document.form1.text1.focus();
+					al=1;
+				}else{
+					document.getElementById('submit').style.cursor="not-allowed";
+					document.getElementById('allowMsg').innerHTML="TV show name is invalid.";
+					document.getElementById('allowMsg').style.color="red";
+					document.getElementById("submit").disabled = true;
+					document.getElementById('tvShowIp').style.boxShadow="1px 1px 5px 1px red";
+					//alert('Please input alphanumeric characters only');
+					al=0;
+				}
+
+			}
+			//alert(as);
+		}
+		function allow(){
+			if(al==0){
+				document.getElementById('allowMsg').innerHTML="TV show name update fail.";
+				document.getElementById('allowMsg').style.color="red";
+				alert('Update faild.');
+			}else{
+				document.getElementById('allowMsg').innerHTML="TV show name update Sucess.";
+				document.getElementById('allowMsg').style.color="green";
+				alert('Update sucess.');
+			}
+			//alert(al);
+		}
+
+		</script>
+
+
+	</body>
+</html>

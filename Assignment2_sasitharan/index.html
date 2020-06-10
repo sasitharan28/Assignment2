@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show trackr</title>
+    <link rel="stylesheet" type='text/css' href="css/index.css">
+  </head>
+  <body>
+    <div id="topBar">
+      <a href="index.html"><button type="button" id='logo'>Show<b>Trackr</b></button></a>
+      <a href="index.html"><button type="button" id='home'>Home</button></a>
+      <a href="add.html"><button type="button" id='add'>Add</button></a>
+      <a href="signUp.html"><button type="button" id='signup'>Sign up</button></a>
+      <a href="logIn.html"><button type="button" id='login'>Login</button></a>
+    </div>
+	<div id='topBar2'>
+		<div id='textCate'>
+			<button>0-9</button>
+			<button>A</button>
+			<button>B</button>
+			<button>C</button>
+			<button>D</button>
+			<button>E</button>
+			<button>F</button>
+			<button>G</button>
+			<button>H</button>
+			<button>I</button>
+			<button>J</button>
+			<button>K</button>
+			<button>L</button>
+			<button>M</button>
+			<button>N</button>
+			<button>O</button>
+			<button>P</button>
+			<button>Q</button>
+			<button>R</button>
+			<button>S</button>
+			<button>T</button>
+			<button>U</button>
+			<button>V</button>
+			<button>W</button>
+			<button>X</button>
+			<button>Y</button>
+			<button>Z</button>
+		</div>
+		<div id='cateDiv'>
+			<button id='action' onclick="typeFun('Action')">Action</button>
+			<button id='adventure' onclick="typeFun('Adventure')">Adventure</button>
+			<button id='animation' onclick="typeFun('Animation')">Animation</button>
+			<button id='children' onclick="typeFun('Children')">Children</button>
+			<button id='comedy' onclick="typeFun('Comedy')">Comedy</button>
+			<button id='crime' onclick="typeFun('Crime')">Crime</button>
+			<button id='documentary' onclick="typeFun('Documentary')">Documentary</button>
+			<button id='drama' onclick="typeFun('Drama')">Drama</button>
+			<button id='family' onclick="typeFun('Family')">Family</button>
+			<button id='fantasy' onclick="typeFun('Fantasy')">Fantasy</button>
+			<button id='food' onclick="typeFun('Food')">Food</button>
+			<button id='homeAndGarden' onclick="typeFun('Home and Garden')">Home and Garden</button>
+			<button id='horror' onclick="typeFun('Horror')">Horror</button>
+			<button id='miniSeries' onclick="typeFun('Mini-Series')">Mini-Series</button>
+			<button id='mystry' onclick="typeFun('Mystry')">Mystry</button>
+			<button id='news' onclick="typeFun('News')">News</button>
+			<button id='reality' onclick="typeFun('Reality')">Reality</button>
+			<button id='romance' onclick="typeFun('Romance')">Romance</button>
+			<button id='sciFi' onclick="typeFun('Sci-Fi')">Sci-Fi</button>
+			<button id='sport' onclick="typeFun('Sport')">Sport</button>
+			<button id='suspense' onclick="typeFun('Suspense')">Suspense</button>
+			<button id='talksshow' onclick="typeFun('Talkshow')">Talkshow</button>
+			<button id='thriller' onclick="typeFun('Thriller')">Thriller</button>
+			<button id='viewAll' onclick="typeFun('View-All')">View-All</button>
+		</div>
+	</div>
+
+	<div id='showBodyDiv'>
+		<div id='titleDiv'>
+			<label id='showCatTitleLabel'>Top 12 Shows</label>
+			<form method='POST' action='#' >
+				<input type='search' placeholder='Search....' id='search'/>
+			</form>
+		</div>
+		<div id='showDiv' class='row'>
+
+			<div id='showUniDiv' class='column'>
+				<a href="show.html?id=breakingBad">
+					<img src='uses/breakingBad.jpg' width='100%' />
+					<br/>Breaking Bad
+				</a><br/>
+				<label>Episodes: 79</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=theWire'>
+					<img src='uses/theWire.jpg' width='100%' />
+					<br/>The Wire
+				</a><br/>
+				<label>Episodes: 66</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=bartletForAmerica'>
+					<img src='uses/bartletForAmerica.jpg' width='100%' />
+					<br/>Bartlet for America
+				</a><br/>
+				<label>Episodes: 157</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=looneyTunes'>
+					<img src='uses/looneyTunes.jpg' width='100%' />
+					<br/>Looney Tunes
+				</a><br/>
+				<label>Episodes: 1107</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=house'>
+					<img src='uses/house.jpg' width='100%' />
+					<br/>House
+				</a><br/>
+				<label>Episodes: 1107</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=theWalkingDead'>
+					<img src='uses/theWalkingDead.jpg' width='100%' />
+					<br/>The Walking Dead
+				</a><br/>
+				<label>Episodes: 138</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=howIMetYourMother'>
+					<img src='uses/howIMetYourMother.jpg' width='100%' />
+					<br/>How I Met Your Mother
+				</a><br/>
+				<label>Episodes: 219</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=theFlash'>
+					<img src='uses/theFlash.jpg' width='100%' />
+					<br/>The Flash
+				</a><br/>
+				<label>Episodes: 22</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=scoobyDooMysteryIncorporated'>
+					<img src='uses/scoobyDooMysteryIncorporated.jpg' width='100%' />
+					<br/>Scooby-Doo! Mystery Incorporated
+				</a><br/>
+				<label>Episodes: 65</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=deadLikeMe'>
+					<img src='uses/deadLikeMe.jpg' width='100%' />
+					<br/>Dead Like Me
+				</a><br/>
+				<label>Episodes: 65</label>
+			</div>
+
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=interstella5555'>
+					<img src='uses/interstella5555.jpg' width='100%' />
+					<br/>Interstella 5555
+				</a><br/>
+				<label>Episodes: 23</label>
+			</div>
+
+			<div id='showUniDiv' class='column'>
+				<a href='show.html?id=doctorWho'>
+					<img src='uses/doctorWho.jpg' width='100%' />
+					<br/>Doctor Who
+				</a><br/>
+				<label>Episodes: 809</label>
+			</div>
+
+		</div>
+	</div>
+
+  <div id="typeShow">
+    <div id='typeShowSubDiv'>
+    </div>
+    <input type="button" id="typeShowCan" value="Cancel" onclick="typeShowCancel()">
+  </div>
+
+
+  <script type="text/javascript">
+    var movie={
+      no:[0,1,2,3,4,5,6,7,8,9,10,11],
+      name:["Breaking Bad","The Wire","The West Wing","Looney Tunes","House","The Walking Dead","How I Met Your Mother","The Flash","Scooby-Doo! Mystery Incorporated","Dead Like Me","Interstella 5555","Doctor Who"],
+      type:["Crime","Crime","Thriller","Animation","Thriller","Action","Comedy","Action","Animation","Comedy","Action","Action"],
+    }
+
+    function typeFun(ty){
+      var d;
+      var a = [];
+      for (i=0; i<12; i++){
+        if(ty=="View-All"){
+          d=movie.name[i];
+          a.push(d);
+        }else if(ty==movie.type[i]){
+
+          d=movie.name[i];
+          a.push(d);
+        //document.getElementById("typeShow").innerHTML = d;
+
+        //document.write("<h1>"+ty+"</h1>"+"<br/>"+d+"<br/>");
+
+        }
+
+      }
+      document.getElementById("typeShow").style.display="block";
+      document.getElementById("typeShowSubDiv").innerHTML = "<h1>"+ty+"</h1>"+a.join(" <br/> ");
+
+    }
+
+
+
+    function typeShowCancel(){
+      document.getElementById("typeShow").style.display="none";
+    }
+
+
+  </script>
+
+
+
+
+
+
+
+  </body>
+</html>

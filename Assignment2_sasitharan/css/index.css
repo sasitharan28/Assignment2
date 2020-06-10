@@ -1,0 +1,224 @@
+body{
+  background-color: #e4e7ec;
+ }
+#topBar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height:50px;
+  z-index:2;
+  background-color:white;
+  border-bottom:2px solid #999;
+}
+#topBar button{
+  height: 50px;
+}
+#topBar a{
+  color:black;
+  text-decoration: none;
+}
+#logo{
+  background-color:yellow;
+  float: left;
+  font-size:17px;
+  cursor: pointer;
+  border: none;
+}
+
+#home,#add,#login,#signup{
+  background-color: white;
+  cursor:pointer;
+  color:#999;
+  border: none;
+  font-size:15px;
+}
+#home{
+  border: 1px dotted #ccc;
+  background-color: #f7f7f7;
+}
+#signup,#login{
+  float: right;
+  margin-right:10px;
+}
+#login{
+	margin-right:10px;
+}
+#topBar2{
+	position:relative;
+	top:42px;
+	left:-1px;
+	width:101%;
+	min-height:150px;
+	background-color:#f4f6f8;
+}
+#textCate{
+	position:relative;
+	margin:auto;
+	top:20px;
+	width:730px;
+}
+#textCate button{
+	border:none;
+	font-size:15px;
+	background-color:#f4f6f8;
+	font-weight:bold;
+}
+#textCate button:hover{
+	color:#4fa7f1;
+	cursor:pointer;
+}
+#cateDiv{
+	position:relative;
+	margin:auto;
+	margin-top:30px;
+	width:1000px;
+	margin-bottom:10px;
+}
+#cateDiv button{
+	margin-top:5px;
+	height:30px;
+	border-radius:5px;
+	background-color:#e4e7ec;
+	color:#888;
+	border:none;
+	font-weight:bold;
+	cursor:pointer;
+}
+#showBodyDiv{
+	margin:auto;
+	margin-top:80px;
+	width:1000px;
+	height:1150px;
+	background-color:white;
+}
+#titleDiv{
+	height:40px;
+	background-color:#f6f6f6;
+	border-bottom:2px solid #ccc;
+}
+#titleDiv label{
+	float:left;
+	margin-left:10px;
+	margin-top:5px;
+	font-size:23px;
+	font-weight:bold;
+}
+#search{
+	margin-top:0px;
+	float:right;
+	margin-right:10px;
+	margin-top:8px;
+	font-size:18px;
+	background-color:#f6f6f6;
+	border:none;
+}
+
+#showUniDiv{
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:200px;
+	margin-left:25px;
+	margin-right:25px;
+	text-align:center;
+}
+#showUniDiv img{
+	border-radius:10px;
+}
+#showUniDiv a{
+	color:black;
+	text-decoration:none;
+}
+#showUniDiv label{
+	color:#888;
+}
+#typeShow{
+  position: absolute;
+  top: 200px;
+  width:50%;
+  height: 400px;
+  background-color: blue;
+  margin-left: 25%;
+  display: none;
+}
+#typeShowSubDiv{
+  margin-left: 20px;
+}
+#typeShowCan{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+
+
+*:focus{
+	border:none;
+	outline:none;
+	outline-style:none;
+}
+
+
+
+
+@media screen and (max-width:1000px){
+	#showBodyDiv{
+		width:750px;
+		height:1500px;
+	}
+	#textCate{
+		width:90%;
+	}
+
+	#cateDiv{
+		width:90%;
+	}
+}
+
+@media screen and (max-width:750px){
+	#showBodyDiv{
+		width:500px;
+		height:2200px;
+	}
+	#textCate{
+		width:90%;
+	}
+
+	#cateDiv{
+		width:90%;
+	}
+}
+
+@media screen and (max-width:520px){
+	#showBodyDiv{
+		width:100%;
+		height:8500px;
+	}
+	#showUniDiv{
+		width:90%;
+		margin-left:4%;
+		font-size:20px;
+		margin-top:15px;
+		margin-bottom:15px;
+	}
+	#search{
+		margin-right:0px;
+		width:40%;
+	}
+	#textCate{
+		width:90%;
+	}
+
+	#cateDiv{
+		width:90%;
+	}
+	#signup{
+		margin-right:0px;
+	}
+	#login{
+		margin-right:0px;
+	}
+}
