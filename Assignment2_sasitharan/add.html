@@ -23,7 +23,7 @@
 				<form method='post' action='#'>
 					<input type='text' placeholder='Enter TV show name' id='tvShowIp' onkeyup="cursor(this.value)" ><br/>
 					<label id='allowMsg'></label><br/>
-					<input type='submit' id='submit' value='Add' onclick="allow()" />
+					<input type='submit' id='submit' value='Add' onclick="allow(tvShowIp.value)" />
 
 
 
@@ -71,13 +71,13 @@
 			}
 			//alert(as);
 		}
-		function allow(){
+		function allow(TVshow){
 			if(al==0){
 				document.getElementById('allowMsg').innerHTML="TV show name update fail.";
 				document.getElementById('allowMsg').style.color="red";
 				alert('Update faild.');
 			}else{
-				document.getElementById('allowMsg').innerHTML="TV show name update Sucess.";
+				document.getElementById('allowMsg').innerHTML=TVshow+" has been added.";
 				document.getElementById('allowMsg').style.color="green";
 				alert('Update sucess.');
 			}
